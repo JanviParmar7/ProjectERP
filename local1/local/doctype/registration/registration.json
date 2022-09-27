@@ -8,6 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_1",
+  "photo",
   "username",
   "firstname",
   "lastname",
@@ -21,6 +22,8 @@
   "fullname",
   "section_break_13",
   "address",
+  "location",
+  "signature",
   "section_break_15"
  ],
  "fields": [
@@ -59,12 +62,12 @@
   },
   {
    "fieldname": "fullname",
-   "fieldtype": "Data",
+   "fieldtype": "Read Only",
    "label": "Full_Name"
   },
   {
    "fieldname": "address",
-   "fieldtype": "Text",
+   "fieldtype": "Data",
    "label": "Address"
   },
   {
@@ -101,11 +104,26 @@
   {
    "fieldname": "section_break_15",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signature",
+   "fieldtype": "Signature",
+   "label": "Signature"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Profile_photo"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "Location"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-13 17:57:18.842145",
+ "modified": "2022-09-26 12:25:28.248820",
  "modified_by": "Administrator",
  "module": "Local",
  "name": "Registration",

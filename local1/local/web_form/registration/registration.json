@@ -20,7 +20,7 @@
  "list_columns": [],
  "login_required": 0,
  "max_attachment_size": 0,
- "modified": "2022-09-13 17:08:28.555987",
+ "modified": "2022-09-22 14:04:57.316690",
  "modified_by": "Administrator",
  "module": "Local",
  "name": "registration",
@@ -111,6 +111,7 @@
   },
   {
    "allow_read_on_all_link_options": 0,
+   "depends_on": "",
    "fieldname": "dateofbirth",
    "fieldtype": "Date",
    "hidden": 0,
@@ -124,7 +125,7 @@
   {
    "allow_read_on_all_link_options": 0,
    "fieldname": "email",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "hidden": 0,
    "label": "Email",
    "max_length": 0,

@@ -1,0 +1,148 @@
+{% extends "templates/base.html" %}
+{% block title %}User Information{% endblock %}
+{% block head_include %}
+
+{% endblock %}
+{% block content %}
+<div class="login-wrap">
+    <div class="login-html">
+        <form action="#" method="get">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Find
+                User
+                Information</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab" required></label>
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        <label for="user" class="label">Enter Email</label>
+                        <input name="email" id="emailid" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <button type="submit" onclick="myfunction()" class="button" id="button1">Show User
+                            Information</button>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="container mt-5">
+    {% for name in users %}
+    {% if name %}
+
+    <table class="abouttable" border="1" width="900px" height="600px">
+
+        <th class="tablehead" colspan="2">
+            <h1 class="head">User Information
+                {% for name in users %}
+                <image width="20%" class="image" src="{{ name.photo }}"></image>
+                </center>
+                {% endfor %}</h1>
+        </th>
+
+
+        <tr>
+            <td>
+                <center><b>User First Name:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.firstname }}</center>
+                {% endfor %}</td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User Last Name:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.lastname }}</center>
+                {% endfor %}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User Full Name:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.fullname }}</center>
+                {% endfor %}</td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User Birth of Date:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.dateofbirth }}</center>
+                {% endfor %}</td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User Mobile Number:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.mobilenumber }}</center>
+                {% endfor %}</td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User Gender:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.gender }}</center>
+                {% endfor %}</td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User City:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.city }}</center>
+                {% endfor %}</td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User State:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.state }}</center>
+                {% endfor %}</td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User Email:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.email }}</center>
+                {% endfor %}</td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User Address:</b></center>
+            </td>
+            <td class="text">{% for name in users %}
+                <center>{{ name.address }}</center>
+                {% endfor %}</td>
+        </tr>
+        <tr>
+            <td>
+                <center><b>User Signature:</b></center>
+            </td>
+            <td>{% for name in users %}
+                <center>
+                    <image width=40% src="{{ name.signature }}"></image>
+                </center>
+                {% endfor %}</td>
+        </tr>
+    </table>
+
+
+    {% else %}
+
+    <p style="font-size:36px; ">This Name User Not Available!</p>
+
+    {% endif %}
+    {% endfor %}
+
+</div>
+{% endblock%}
