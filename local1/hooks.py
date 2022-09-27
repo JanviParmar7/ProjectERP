@@ -185,3 +185,7 @@ app_license = "MIT"
 # auth_hooks = [
 #	"local1.auth.validate"
 # ]
+
+fixtures = [
+    "Custom Field"
+]
